@@ -14,7 +14,7 @@ count=0
 # loops through directory containing RNA-seq reads
 for path in /scratch/13077201/RNA-seq/*;
 do
-  # true if it's the reverse file
+  # if statement is true for every second read, so for every reverse read. This needs to be adjusted if there are more than 2 files per individual
   if [ ${count} -eq 1 ]
   then
     path=$(echo ${path} | cut -d '_' -f 1)
